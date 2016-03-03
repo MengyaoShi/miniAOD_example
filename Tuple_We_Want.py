@@ -59,7 +59,14 @@ process.MINIAODSIMoutput = cms.OutputModule("PoolOutputModule",
     "keep *_*_IsoTau_RECO",
     "keep *_*_Tau_RECO",
     "keep *_hpsPFTauProducer_*_RECO",
-    "keep *_pfTausEI_*_RECO"
+    "keep *_pfTausEI_*_RECO",
+    "keep *_ak4GenJets_*_HLT",
+    "keep *_ak4GenJetsNoNu_*_HLT",
+    "keep *_ak4CaloJets_*_RECO",
+    "keep *_ak4PFJets_*_RECO",
+    "keep *_ak4PFJetsCHS_*_RECO",
+    "keep *_ak4TrackJets_*_RECO",
+    "keep *_ak4JetID_*_RECO"
     ),
     overrideInputFileSplitLevels = cms.untracked.bool(True),
 )

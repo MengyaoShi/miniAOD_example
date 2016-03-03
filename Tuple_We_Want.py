@@ -53,8 +53,15 @@ process.MINIAODSIMoutput = cms.OutputModule("PoolOutputModule",
     eventAutoFlushCompressedSize = cms.untracked.int32(15728640),
     fastCloning = cms.untracked.bool(False),
     fileName = cms.untracked.string('miniAOD-prod_PAT.root'),
-    outputCommands = process.MINIAODSIMEventContent.outputCommands,
-    overrideInputFileSplitLevels = cms.untracked.bool(True)
+    outputCommands = process.MINIAODSIMEventContent.outputCommands+cms.untracked.vstring(
+    "keep *_hpsPFTauTransverseImpactParameters_*_RECO",
+    "keep recoPFTauDiscriminator_*_*_RECO",
+    "keep *_*_IsoTau_RECO",
+    "keep *_*_Tau_RECO",
+    "keep *_hpsPFTauProducer_*_RECO",
+    "keep *_pfTausEI_*_RECO"
+    ),
+    overrideInputFileSplitLevels = cms.untracked.bool(True),
 )
 
 # Additional output definition

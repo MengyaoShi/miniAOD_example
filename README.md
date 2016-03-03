@@ -7,3 +7,4 @@ One way to keep AOD tau while keep all other info from miniAOD, to me, it may be
 
 https://github.com/cms-sw/cmssw/blob/CMSSW_8_1_X/Configuration/EventContent/python/EventContent_cff.py
 
+cmsDriver.py miniAOD-prod -s PAT --eventcontent MINIAODSIM --runUnscheduled --mc --filein root://eoscms//eos/cms/store/user/mshi/heavyHiggs_300_light_9_2mu2tau_sim/heavyHiggs_300_light_9_2mu2tau_sim_NUM.root --conditions 76X_mcRun2_asymptotic_v12 -n 300 --no_exec
